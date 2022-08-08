@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/matthew/_workspace/src/github.com/gunners-coin'
+grep -E '^[0-9a-zA-Z_-]+:(.*?## .*)?$'  Makefile config/dev.env.example | sed 's/^Makefile://' | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $1, $2}'
+make: Leaving directory '/home/matthew/_workspace/src/github.com/gunners-coin'
+ 
